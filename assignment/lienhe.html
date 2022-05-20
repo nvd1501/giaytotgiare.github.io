@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vaditeform</title>
+    <link rel="stylesheet" href="lienhe.css">
+    <style>
+        .no1{
+            width: 300px;
+            height: 30px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="menu">
+        <div class="left">
+            <h1>Liên hệ với chũng tôi</h1>
+    <form action="" onsubmit="return validateForm()">
+        <input class="no1" type="text" id="hoten" placeholder="Họ Tên">
+        <br>
+        <input class="no1" type="email" name="" id="email" placeholder="Email">
+        <br>
+        <input class="no1"type="text" name="" id="tieude" placeholder="Số điện thoại">
+        <br>
+        <p>
+            <label>Sở thích</label>
+            <label><input type="checkbox" value="Đọc sách" name="hobbies"> Đọc sách</label>
+            <label><input type="checkbox" value="Xem Phim" name="hobbies"> Xem Phim </label>
+            <label><input type="checkbox" value="Nghe" name="hobbies"> Nghe</label>
+            <label><input type="checkbox" value="Đá Bóng" name="hobbies"> Đá Bóng</label>
+            <label><input type="checkbox" value="May vá" name="hobbies"> May vá</label>
+            <label><input type="checkbox" value="Sở thích" name="hobbies"> Sở thích</label>
+        </p>
+        <textarea name="" id="noidung" cols="80" rows="10"></textarea>
+        <br>
+        <button type="submit">gửi</button>
+    </form>
+</div>
+    <script>
+        var hoten = document.getElementById('hoten');
+        var email = document.getElementById('email');
+        var tieude = document.getElementById('tieude');
+        var noidung = document.getElementById('noidung');
+
+        function validateForm() {
+            if(hoten.value == '' || hoten.value.length < 8){
+                alert('Bạn cần nhập họ tên có ít nhất 8 ki tự');
+                hoten.style = 'border: 1px solid red; background: yellow; outline: none';
+                hoten.focus();
+                return false;
+            }
+            //email
+            //khai báo
+            var reg =/\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/;
+            if (!reg.test(email.value)){
+                alert('email ban chua dung');
+                email.focus();
+                return fales;
+            }
+        }
+    </script>
+    <div class="right">
+        <h1>Bản đồ</h1>
+        <hr>
+        đừng ngại ngần gủi thắc mắc về cho chúng tôi <br>
+        Email: ngothehung2110@gmail.com <br>
+        sdt:0964898718 <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12094.134318660846!2d105.69653950000811!3d21.096381281274834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455e8aff8546f%3A0xfa4cad74d9887ffe!2zVMOibiBI4buZaSwgxJBhbiBQaMaw4bujbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1645158306783!5m2!1svi!2s" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    
+    </div>
+</div>
+</body>
+</html>

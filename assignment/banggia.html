@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Hàng</title>
+    <script src="js/order.js"></script>
+    <style>
+        .container{
+            margin: auto;
+            width: 50%;
+        }
+        .title{
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bold;
+            color: rgba(31, 98, 242, 0.723);
+
+        }
+        table, th, td, tr{
+            border: 1px solid rgb(130, 130, 221);
+            border-collapse:collapse ;
+            padding: 5px;
+        }
+        thead{
+            background-color: rgba(99, 144, 240, 0.576);
+            color: rgb(102, 135, 237);
+        }
+        tr:nth-child(even){
+            background-color: #dcdede;
+        }
+        table{
+            width: 100%;
+        }
+        .checkColumn{
+            width: 40px;
+            text-align: center;
+        }
+        .nameColumn{
+            width: 40%;
+            text-align: left;
+        }
+        .priceColumn{
+            width: 10%;
+        }
+        .qtyColumn{
+            width: 30%;
+        }
+        .totalLabel{
+            text-align: center;
+            font-weight: bold;
+        }
+        .amount, .total{
+            text-align: center;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body onload="filterPriceLevel()">
+    <div class="container">
+        <hr>
+        <form action="form-group">
+            <div class="form-group">
+                <label for="" class="form-lable">Lọc mức giá</label>
+                <select name="" id="priceLevel" class="form-control" onchange="filterPriceLevel()">
+                    <option value="0">Tất cả</option>
+                    <option value="1">&lt; 100</option>
+                    <option value="2">101 - 200</option>
+                    <option value="3">201 - 300</option>
+                    <option value="4">&lt;  301 </option>
+                </select>
+            </div>
+        </form>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="checkColumn">
+                        <input type="checkbox" id="all" onchange="checkAll(this)">
+                    </th>
+                    <th class="nameColumn">Hàng hoá</th>
+                    <th class="priceColumn">Đơn giá</th>
+                    <th class="qtyColumn">Số lượng</th>
+                    <th class="amountColumn">Thành Tiền</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>
+                        <input type="checkbox"> 
+                    </td>
+                    <td>Eau De Parfum</td>
+                    <td>100</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td> <span id="amount"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"> 
+                    </td>
+                    <td>CHANEL</td>
+                    <td>200</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td> <span id="amount"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"> 
+                    </td>
+                    <td>Bleu De Chanel</td>
+                    <td>300</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td> <span id="amount"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"> 
+                    </td>
+                    <td>Boss The Scent</td>
+                    <td>400</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td> <span id="amount"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"> 
+                    </td>
+                    <td>Creed Royal Water</td>
+                    <td>500</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td> <span id="amount"></span></td>
+                </tr>
+                
+            </tbody>
+           
+            <tfoot>
+                <tr>
+                    <td colSpan="4" class="totalLabel">Tổng Tiền:</td>
+                    <td> <span id="total" class="total">0</span></td>
+                </tr>
+            </tfoot>
+        </table>
+        <script src="js/order.js"></script>
+    </div>
+</body>
+</html>

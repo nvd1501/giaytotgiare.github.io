@@ -1,0 +1,51 @@
+
+
+h2{
+    text-align: center;
+    color: rgb(223, 67, 189);
+}
+
+.box{   
+    width: 30%;
+    float: left;
+    text-align: center;
+    height: 30%;
+    max-width: 25%;
+    max-height: 30%;
+   
+}
+.sanpham{
+   border: 2px solid gray;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    line-height: auto;
+    border-radius: 10px;
+}
+.sanpham img{
+    max-width: 60%;
+    
+}
+.sanpham .gia{
+    color: rgb(223, 67, 189);
+}
+del{
+    color: black;
+}
+.box>.sanpham:hover{
+    border:  2px solid red ;
+    box-shadow: 0 0 20px orange;
+    color:orange ;
+}
+button{
+    text-transform: none;
+    text-align: center;
+    background-color: #446084;
+    color: #fff;
+    padding: 10px 30px;
+}
+.nuochoachiet{
+    height: 1000px;
+    width: 1000px;
+}
+

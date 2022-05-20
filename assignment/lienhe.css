@@ -1,0 +1,17 @@
+
+.menu .left{
+    float: left;
+    width: 40%;
+}
+.menu .right{
+    float:right;
+    width: 40%;
+
+}
+.menu{
+    max-width: 1000px;
+    margin:0  auto;
+}
+#noidung{
+    width: 90%;
+}
